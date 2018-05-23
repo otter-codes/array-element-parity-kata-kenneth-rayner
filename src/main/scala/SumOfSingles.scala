@@ -1,9 +1,9 @@
 object SumOfSingles {
 
   def sumNonRepeatedNos(input:List[Int]):Int= {
-    val inputDistinct =input.distinct
-    val repeatedNumbers = input diff inputDistinct
-    val nonRepeatedNumbers =inputDistinct diff repeatedNumbers
+
+    val repeatedNumbers = input diff input.distinct
+    val nonRepeatedNumbers =input.distinct diff repeatedNumbers
     nonRepeatedNumbers.sum
   }
 }
